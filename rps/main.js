@@ -51,7 +51,28 @@ console.log(" ---------- Let's Play Rock! Paper! Scissors! ---------- ");
 
 console.log("The best of 5 rounds wins the game! Good Luck!")
 
-let playerSelection = console.log(window.prompt("Enter you selection here: "));
+
+
+let playerSelection = console.log(prompt("Enter you selection here: "));
+
+
+
+//aparently to get playRound() to work, you need to allow for in the input to always be set to a string, even if empty, henc || " "
+
+if (playerSelection != null && playerSelection != undefined) {
+    playerSelection = playerSelection;
+} else {
+    playerSelection = '';
+}
+
+
+
+let playerGuess = "oh boy donuts";
+
+console.log(playerGuess.toUpperCase());
+
+/*
+let computerSelection;
 
 const rpsSelect  = ['ROCK', 'PAPER', 'SCISSORS'] ;
 
@@ -70,21 +91,33 @@ function shoot(min, max) {
 }
 
 
+function compare() { 
+    console.log('Booya');
+}
+
+
 function playRound(playerSelection, computerSelection) {
 
-    console.log("Let's play a round!");
+    if (playerGuess == rpsSelect[0] || playerGuess === rpsSelect[1] || playerGuess === rpsSelect[2]) {
+        console.log(compare()); 
+    } else {
+        console.log(prompt("Please Enter either Rock, Paper, or Scissors: "));
+    }
 
+    // console.log("Let's play a round!");
 
-    console.log(shoot());
+    // computerSelection = console.log(shoot());
+
+   
 
 }
 
 
+*/
 
 
 
-
-playRound();
+// playRound();
 
 // let computerSelection = getComputerChoice;
 
