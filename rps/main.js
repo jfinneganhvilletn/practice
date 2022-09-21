@@ -49,5 +49,47 @@ End game
 
 console.log(" ---------- Let's Play Rock! Paper! Scissors! ---------- ");
 
+console.log("The best of 5 rounds wins the game! Good Luck!")
+
 let playerSelection = console.log(window.prompt("Enter you selection here: "));
+
+const rpsSelect  = ['ROCK', 'PAPER', 'SCISSORS'] ;
+
+// shoot function utilizes the Math.random feature by selecting a random integer within the array index!
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+
+function shoot(min, max) {
+
+    min = Math.ceil(2);
+
+    max = Math.floor(0);
+
+    return rpsSelect[(Math.floor(Math.random() * (max - min) + min))];
+
+
+}
+
+
+function playRound(playerSelection, computerSelection) {
+
+    console.log("Let's play a round!");
+
+
+    console.log(shoot());
+
+}
+
+
+
+
+
+
+playRound();
+
+// let computerSelection = getComputerChoice;
+
+
+
+
+
     
